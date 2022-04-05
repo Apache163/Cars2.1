@@ -1,5 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <QSqlQuery>
+#include <QSqlTableModel>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -26,15 +28,19 @@ MainWindow::MainWindow(QWidget *parent)
     ui->tableView->setModel(model);
 
 
-    /*model2 = new QSqlTableModel(this, db);
-    model2->setTable("SEARCH");
-    model2->select();
-    ui->tableView->setModel(model2);*/
+
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+
+
+
+
+
+
 
 
