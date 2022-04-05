@@ -44,3 +44,18 @@ MainWindow::~MainWindow()
 
 
 
+
+void MainWindow::on_tableView_clicked(const QModelIndex &index)
+{
+    row = index.row();
+}
+
+
+void MainWindow::on_pushButton_clicked()
+{
+ //Добавить switch-case на проверку радиокнопок и отправки соответствующего запроса
+    //ui->radioClear->isChecked() - проверка на нажатие
+    //запрос типа select * from aboutcar where КОЛОНКА = выделенная ячейка в таблице
+
+}
+
