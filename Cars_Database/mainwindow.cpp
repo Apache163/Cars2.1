@@ -52,7 +52,7 @@ MainWindow::~MainWindow()
 void MainWindow::on_pushButton_clicked()
 {
     QString str = ui->textEdit->toPlainText();
-    qDebug() << "You typed: " + str + " in TextEdit.";
+    qDebug() << "You typed: " + str + " in TextEdit";
 
 
 
@@ -60,56 +60,59 @@ void MainWindow::on_pushButton_clicked()
 
     if (ui->radioButton->isChecked())
     {
-        query = new QSqlQuery(db);
+
+        /*query = new QSqlQuery(db);
         query->prepare("select * from aboutcar where CAR_ID = " + str);
-        model->query();
+        model->query();*/
+        model->setFilter("CAR_ID = "+str);
+        model->select();
     }
     if (ui->radioButton_2->isChecked())
     {
-        model->setFilter("BRAND = 'Tesla'");
+        model->setFilter("BRAND = "+str);
         model->select();
     }
     if (ui->radioButton_3->isChecked())
     {
-        model->setFilter("MODEL = 'XC70'");
+        model->setFilter("MODEL = "+str);
         model->select();
     }
     if (ui->radioButton_4->isChecked())
     {
-        query = new QSqlQuery(db);
+        /*query = new QSqlQuery(db);
         query->prepare("select * from aboutcar where MODEL_YEAR = " + str);
-        model->query();
-        /*model->setFilter("MODEL_YEAR = 2019");
-        model->select();*/
+        model->query();*/
+        model->setFilter("MODEL_YEAR = "+str);
+        model->select();
     }
     if (ui->radioButton_5->isChecked())
     {
-        query = new QSqlQuery(db);
+        /*query = new QSqlQuery(db);
         query->prepare("select * from aboutcar where FIRST_MODEL_YEAR = " + str);
-        model->query();
-        /*model->setFilter("FIRST_MODEL_YEAR = 2004");
-        model->select();*/
+        model->query();*/
+        model->setFilter("FIRST_MODEL_YEAR = "+str);
+        model->select();
     }
     if (ui->radioButton_6->isChecked())
     {
-        model->setFilter("BODY_TYPE = 'Jeep'");
+        model->setFilter("BODY_TYPE = "+str);
         model->select();
     }
     if (ui->radioButton_7->isChecked())
     {
-        query = new QSqlQuery(db);
-        query->prepare("select * from aboutcar where DOORS = " + str);
-        model->query();
-        /*model->setFilter("DOORS = 5");
-        model->select();*/
+        /*query = new QSqlQuery(db);
+        query->prepare("select * from aboutcar where DOORS = "+ str);
+        model->query();*/
+        model->setFilter("DOORS = "+str);
+        model->select();
     }
     if (ui->radioButton_8->isChecked())
     {
-        query = new QSqlQuery(db);
+        /*query = new QSqlQuery(db);
         query->prepare("select * from aboutcar where ENGINE_POWER = " + str);
-        model->query();
-        /*model->setFilter("ENGINE_POWER = 560");
-        model->select();*/
+        model->query();*/
+        model->setFilter("ENGINE_POWER = "+str);
+        model->select();
     }
 
 }
