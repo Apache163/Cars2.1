@@ -38,6 +38,7 @@ private:
     QSqlTableModel *model;
 
     int row;
+    int rb;
 
 };
 #endif // MAINWINDOW_H
