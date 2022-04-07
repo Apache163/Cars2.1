@@ -42,5 +42,6 @@ private:
 
     int rb;
     QString str;
+    QString qr;
 };
 #endif // MAINWINDOW_H

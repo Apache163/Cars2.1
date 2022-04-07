@@ -58,12 +58,14 @@ void MainWindow::on_pushButton_clicked()
     }
     if (ui->radioButton_2->isChecked())
     {
-        model->setFilter("BRAND = "+str);
+        qr = "BRAND = '"+str+"'";
+        model->setFilter(qr);
         model->select();
     }
     if (ui->radioButton_3->isChecked())
     {
-        model->setFilter("MODEL = "+str);
+        qr = "MODEL = '"+str+"'";
+        model->setFilter(qr);
         model->select();
     }
     if (ui->radioButton_4->isChecked())
@@ -84,7 +86,8 @@ void MainWindow::on_pushButton_clicked()
     }
     if (ui->radioButton_6->isChecked())
     {
-        model->setFilter("BODY_TYPE = "+str);
+        qr = "BODY_TYPE = '"+str+"'";
+        model->setFilter(qr);
         model->select();
     }
     if (ui->radioButton_7->isChecked())
@@ -103,6 +106,7 @@ void MainWindow::on_pushButton_clicked()
         model->setFilter("ENGINE_POWER = "+str);
         model->select();
     }
+    qDebug() << qr;
 
 
 }
