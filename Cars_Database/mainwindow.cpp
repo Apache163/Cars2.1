@@ -46,14 +46,13 @@ MainWindow::~MainWindow()
 
 
 
-void MainWindow::on_tableView_clicked(const QModelIndex &index)
-{
-    row = index.row();
-}
+
 
 
 void MainWindow::on_pushButton_clicked()
 {
+   word = QT_FEATURE_textedit;
+
     if (ui->radioButton->isChecked())
     {
         rb = 1;
@@ -82,35 +81,70 @@ void MainWindow::on_pushButton_clicked()
     {
         rb = 7;
     }
+    if (ui->radioButton_8->isChecked())
+    {
+        rb = 8;
+    }
     switch(rb)
     {
         case 1:
+        model->setFilter("CAR_ID = 4");
+        model->select();
         //запрос;
         break;
         case 2:
+        model->setFilter("BRAND = Tesla");
+        model->select();
         //запрос;
         break;
         case 3:
+        model->setFilter("MODEL = XC70");
+        model->select();
         //запрос;
         break;
         case 4:
+        model->setFilter("MODEL_YEAR = 2019");
+        model->select();
         //запрос;
         break;
         case 5:
+        model->setFilter("FIRST_MODEL_YEAR = 2004");
+        model->select();
         //запрос;
         break;
         case 6:
+        model->setFilter("BODY_TYPE = Jeep");
+        model->select();
         //запрос;
         break;
         case 7:
+        model->setFilter("DOORS = 5");
+        model->select();
+        //запрос;
+        break;
+        case 8:
+        model->setFilter("ENGINE_POWER = 560");
+        model->select();
         //запрос;
         break;
         }
+
    std::cout << rb;
+
 
  //Добавить switch-case на проверку радиокнопок и отправки соответствующего запроса
     //ui->radioClear->isChecked() - проверка на нажатие
     //запрос типа select * from aboutcar where КОЛОНКА = выделенная ячейка в таблице
 
+}
+
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    query = new QSqlQuery(db);
+    model = new QSqlTableModel(this, db);
+    model->setTable("ABOUT_CARS");
+    model->select();
+    ui->tableView->setModel(model);
 }
 

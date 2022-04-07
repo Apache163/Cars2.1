@@ -27,9 +27,10 @@ private slots:
 
 
 
-    void on_tableView_clicked(const QModelIndex &index);
 
     void on_pushButton_clicked();
+
+    void on_pushButton_2_clicked();
 
 private:
     Ui::MainWindow *ui;
@@ -37,8 +38,7 @@ private:
     QSqlQuery *query;
     QSqlTableModel *model;
 
-    int row;
     int rb;
-
+    QString word;
 };
 #endif // MAINWINDOW_H
