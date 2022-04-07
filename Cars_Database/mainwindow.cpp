@@ -51,7 +51,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-   word = QT_FEATURE_textedit;
+    QString str= textEdit->toplainText();
 
     if (ui->radioButton->isChecked())
     {
@@ -93,12 +93,12 @@ void MainWindow::on_pushButton_clicked()
         //запрос;
         break;
         case 2:
-        model->setFilter("BRAND = Tesla");
+        model->setFilter("BRAND = 'Tesla'");
         model->select();
         //запрос;
         break;
         case 3:
-        model->setFilter("MODEL = XC70");
+        model->setFilter("MODEL = 'XC70'");
         model->select();
         //запрос;
         break;
@@ -113,7 +113,7 @@ void MainWindow::on_pushButton_clicked()
         //запрос;
         break;
         case 6:
-        model->setFilter("BODY_TYPE = Jeep");
+        model->setFilter("BODY_TYPE = 'Jeep'");
         model->select();
         //запрос;
         break;

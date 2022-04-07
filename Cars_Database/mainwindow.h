@@ -39,6 +39,6 @@ private:
     QSqlTableModel *model;
 
     int rb;
-    QString word;
+    QString str;
 };
 #endif // MAINWINDOW_H
