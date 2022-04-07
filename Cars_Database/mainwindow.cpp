@@ -38,22 +38,11 @@ MainWindow::~MainWindow()
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
 void MainWindow::on_pushButton_clicked()
 {
     QString str = ui->textEdit->toPlainText();
     qDebug() << "You typed: " + str + " in TextEdit";
-
+    ui->textEdit->clear();
 
 
 
@@ -115,15 +104,23 @@ void MainWindow::on_pushButton_clicked()
         model->select();
     }
 
+
 }
 
 
 void MainWindow::on_pushButton_2_clicked()
 {
+    ui->textEdit->clear();
     query = new QSqlQuery(db);
     model = new QSqlTableModel(this, db);
     model->setTable("ABOUT_CARS");
     model->select();
     ui->tableView->setModel(model);
+}
+
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    this->close();
 }
 

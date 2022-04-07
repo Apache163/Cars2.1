@@ -39,6 +39,7 @@ public:
     QRadioButton *radioButton_8;
     QPushButton *pushButton_2;
     QTextEdit *textEdit;
+    QPushButton *pushButton_3;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -54,7 +55,7 @@ public:
         tableView->setGeometry(QRect(20, 20, 831, 591));
         pushButton = new QPushButton(centralwidget);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(360, 640, 101, 21));
+        pushButton->setGeometry(QRect(310, 640, 101, 21));
         radioButton = new QRadioButton(centralwidget);
         radioButton->setObjectName(QString::fromUtf8("radioButton"));
         radioButton->setGeometry(QRect(140, 620, 84, 19));
@@ -81,10 +82,13 @@ public:
         radioButton_8->setGeometry(QRect(650, 620, 84, 19));
         pushButton_2 = new QPushButton(centralwidget);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        pushButton_2->setGeometry(QRect(490, 640, 101, 21));
+        pushButton_2->setGeometry(QRect(440, 640, 101, 21));
         textEdit = new QTextEdit(centralwidget);
         textEdit->setObjectName(QString::fromUtf8("textEdit"));
-        textEdit->setGeometry(QRect(230, 640, 101, 21));
+        textEdit->setGeometry(QRect(180, 640, 101, 21));
+        pushButton_3 = new QPushButton(centralwidget);
+        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
+        pushButton_3->setGeometry(QRect(560, 640, 101, 21));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -112,6 +116,7 @@ public:
         radioButton_7->setText(QApplication::translate("MainWindow", "DOORS", nullptr));
         radioButton_8->setText(QApplication::translate("MainWindow", "ENGINE POWER", nullptr));
         pushButton_2->setText(QApplication::translate("MainWindow", "Back to DB", nullptr));
+        pushButton_3->setText(QApplication::translate("MainWindow", "Exit", nullptr));
     } // retranslateUi
 
 };
