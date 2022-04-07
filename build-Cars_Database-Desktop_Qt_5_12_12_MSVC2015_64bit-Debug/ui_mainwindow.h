@@ -79,7 +79,7 @@ public:
         radioButton_7->setGeometry(QRect(590, 620, 84, 19));
         radioButton_8 = new QRadioButton(centralwidget);
         radioButton_8->setObjectName(QString::fromUtf8("radioButton_8"));
-        radioButton_8->setGeometry(QRect(650, 620, 84, 19));
+        radioButton_8->setGeometry(QRect(650, 620, 101, 19));
         pushButton_2 = new QPushButton(centralwidget);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
         pushButton_2->setGeometry(QRect(440, 640, 101, 21));
