@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Мар 30 2022 г., 14:26
+-- Время создания: Апр 17 2022 г., 11:10
 -- Версия сервера: 8.0.24
 -- Версия PHP: 7.1.33
 
@@ -41,7 +41,10 @@ INSERT INTO `owner` (`OwnerId`, `FullName`, `Email`) VALUES
 (0, 'Ivanov Ivan Ivanovich', 'ivanov@mail.ru'),
 (1, 'Petrov Petr Petrovich', 'petrovich@yandex.ru'),
 (2, 'Sergeev Sergey Sergeevich', 'sss@rambler.ru'),
-(3, 'Alekseev Aleksey Alekseevich', 'AlexAA@gmail.com');
+(3, 'Alekseev Aleksey Alekseevich', 'AlexAA@gmail.com'),
+(4, 'Alexandrov Alexandr Alexandrovich', 'aaa@mail.ru'),
+(5, 'Kirillov Kirill Kirillovich', 'kirill@ya.ru'),
+(6, 'Evgeniev Evgeniy Evgenievich', 'eee@gmail.com');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

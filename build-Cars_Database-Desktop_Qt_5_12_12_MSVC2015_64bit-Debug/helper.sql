@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Мар 30 2022 г., 14:27
+-- Время создания: Апр 17 2022 г., 11:10
 -- Версия сервера: 8.0.24
 -- Версия PHP: 7.1.33
 
@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `helper` (
-  `CarId` int NOT NULL,
+  `CC_ID` int NOT NULL,
   `OwnerId` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -36,12 +36,17 @@ CREATE TABLE `helper` (
 -- Дамп данных таблицы `helper`
 --
 
-INSERT INTO `helper` (`CarId`, `OwnerId`) VALUES
+INSERT INTO `helper` (`CC_ID`, `OwnerId`) VALUES
 (0, 0),
 (1, 1),
 (2, 2),
 (3, 3),
-(4, 3);
+(4, 3),
+(5, 4),
+(6, 4),
+(7, 5),
+(8, 6),
+(9, 6);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
