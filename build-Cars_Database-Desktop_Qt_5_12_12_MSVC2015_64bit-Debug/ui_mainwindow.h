@@ -167,7 +167,7 @@ public:
         pushButton_4->setGeometry(QRect(610, 610, 80, 21));
         pushButton_5 = new QPushButton(tab_2);
         pushButton_5->setObjectName(QString::fromUtf8("pushButton_5"));
-        pushButton_5->setGeometry(QRect(700, 610, 80, 21));
+        pushButton_5->setGeometry(QRect(690, 610, 80, 21));
         pushButton_6 = new QPushButton(tab_2);
         pushButton_6->setObjectName(QString::fromUtf8("pushButton_6"));
         pushButton_6->setGeometry(QRect(780, 610, 80, 21));
@@ -213,7 +213,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(2);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);

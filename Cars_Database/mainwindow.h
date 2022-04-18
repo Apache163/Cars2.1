@@ -36,6 +36,12 @@ private slots:
 
 
 
+    void on_pushButton_4_clicked();
+
+    void on_pushButton_6_clicked();
+
+    void on_pushButton_5_clicked();
+
 private:
     Ui::MainWindow *ui;
     QSqlDatabase db;
@@ -43,6 +49,8 @@ private:
     QSqlTableModel *model;
     QSqlQuery *query2;
     QSqlTableModel *model2;
+    QSqlQuery *query3;
+    QSqlTableModel *model3;
 
     int rb;
     QString str;

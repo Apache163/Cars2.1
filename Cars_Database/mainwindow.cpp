@@ -33,6 +33,12 @@ MainWindow::MainWindow(QWidget *parent)
     model2->setTable("currentcar");
     model2->select();
     ui->tableView_2->setModel(model2);
+
+    query3 = new QSqlQuery(db);
+    model3 = new QSqlTableModel(this, db);
+    model3->setTable("owner");
+    model3->select();
+    ui->tableView_3->setModel(model3);
 }
 
 MainWindow::~MainWindow()
@@ -40,7 +46,7 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_pushButton_clicked()
+void MainWindow::on_pushButton_clicked() //Запросы по поиску общей информации об авто
 {
     QString str = ui->textEdit->toPlainText();
     qDebug() << "You typed: " + str + " in TextEdit";
@@ -108,4 +114,91 @@ void MainWindow::on_pushButton_3_clicked()
 }
 
 
+
+
+void MainWindow::on_pushButton_4_clicked() //Запросы по поиску конкретного авто
+{
+    QString str = ui->textEdit_2->toPlainText();
+    qDebug() << "You typed: " + str + " in TextEdit";
+    ui->textEdit_2->clear();
+
+    if (ui->radioButton_9->isChecked())
+    {
+        model2->setFilter("CC_ID = "+str);
+        model2->select();
+    }
+    if (ui->radioButton_10->isChecked())
+    {
+        model2->setFilter("CAR_ID = "+str);
+        model2->select();
+    }
+    if (ui->radioButton_11->isChecked())
+    {
+        qr = "BRAND = '"+str+"'";
+        model2->setFilter(qr);
+        model2->select();
+    }
+    if (ui->radioButton_12->isChecked())
+    {
+        qr = "MODEL = '"+str+"'";
+        model2->setFilter(qr);
+        model2->select();
+    }
+    if (ui->radioButton_13->isChecked())
+    {
+        model2->setFilter("MODEL_YEAR = "+str);
+        model2->select();
+    }
+    if (ui->radioButton_14->isChecked())
+    {
+        model2->setFilter("FIRST_MODEL_YEAR = "+str);
+        model2->select();
+    }
+    if (ui->radioButton_15->isChecked())
+    {
+        qr = "BODY_TYPE = '"+str+"'";
+        model2->setFilter(qr);
+        model2->select();
+    }
+    if (ui->radioButton_16->isChecked())
+    {
+        qr = "BODY_COLOR = '"+str+"'";
+        model2->setFilter(qr);
+        model2->select();
+    }
+    if (ui->radioButton_17->isChecked())
+    {
+        model2->setFilter("MILEAGE <= "+str);
+        model2->select();
+    }
+    if (ui->radioButton_18->isChecked())
+    {
+        model2->setFilter("DOORS = "+str);
+        model2->select();
+    }
+    if (ui->radioButton_19->isChecked())
+    {
+        model2->setFilter("ENGINE_POWER = "+str);
+        model2->select();
+    }
+
+
+
+}
+
+
+void MainWindow::on_pushButton_6_clicked()
+{
+    this->close();
+}
+
+
+void MainWindow::on_pushButton_5_clicked()
+{
+    query2 = new QSqlQuery(db);
+    model2 = new QSqlTableModel(this, db);
+    model2->setTable("currentcar");
+    model2->select();
+    ui->tableView_2->setModel(model2);
+}
 
