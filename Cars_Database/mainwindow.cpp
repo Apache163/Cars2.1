@@ -28,11 +28,11 @@ MainWindow::MainWindow(QWidget *parent)
     model->select();
     ui->tableView->setModel(model);
 
-   /* query2 = new QSqlQuery(db);     Выводится необходимая таблица, но в первой вкладке
+    query2 = new QSqlQuery(db);
     model2 = new QSqlTableModel(this, db);
     model2->setTable("currentcar");
     model2->select();
-    ui->tableView->setModel(model2);*/
+    ui->tableView_2->setModel(model2);
 }
 
 MainWindow::~MainWindow()
@@ -106,4 +106,6 @@ void MainWindow::on_pushButton_3_clicked()
 {
     this->close();
 }
+
+
 

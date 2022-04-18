@@ -19,7 +19,6 @@
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTabWidget>
 #include <QtWidgets/QTableView>
-#include <QtWidgets/QTableWidget>
 #include <QtWidgets/QTextEdit>
 #include <QtWidgets/QWidget>
 
@@ -45,7 +44,6 @@ public:
     QRadioButton *radioButton_8;
     QPushButton *pushButton;
     QWidget *tab_2;
-    QTableWidget *tableWidget;
     QTextEdit *textEdit_2;
     QRadioButton *radioButton_9;
     QRadioButton *radioButton_10;
@@ -61,8 +59,8 @@ public:
     QPushButton *pushButton_4;
     QPushButton *pushButton_5;
     QPushButton *pushButton_6;
+    QTableView *tableView_2;
     QWidget *tab_3;
-    QTableWidget *tableWidget_2;
     QTextEdit *textEdit_3;
     QRadioButton *radioButton_20;
     QRadioButton *radioButton_21;
@@ -70,6 +68,7 @@ public:
     QPushButton *pushButton_7;
     QPushButton *pushButton_8;
     QPushButton *pushButton_9;
+    QTableView *tableView_3;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -82,7 +81,7 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         tabWidget = new QTabWidget(centralwidget);
         tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
-        tabWidget->setGeometry(QRect(10, 0, 871, 671));
+        tabWidget->setGeometry(QRect(0, 0, 871, 681));
         tab = new QWidget();
         tab->setObjectName(QString::fromUtf8("tab"));
         tableView = new QTableView(tab);
@@ -90,7 +89,7 @@ public:
         tableView->setGeometry(QRect(0, 0, 861, 591));
         pushButton_3 = new QPushButton(tab);
         pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
-        pushButton_3->setGeometry(QRect(540, 620, 101, 21));
+        pushButton_3->setGeometry(QRect(550, 620, 101, 21));
         radioButton_3 = new QRadioButton(tab);
         radioButton_3->setObjectName(QString::fromUtf8("radioButton_3"));
         radioButton_3->setGeometry(QRect(250, 600, 84, 19));
@@ -99,10 +98,10 @@ public:
         radioButton_4->setGeometry(QRect(310, 600, 84, 19));
         pushButton_2 = new QPushButton(tab);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        pushButton_2->setGeometry(QRect(420, 620, 101, 21));
+        pushButton_2->setGeometry(QRect(430, 620, 101, 21));
         textEdit = new QTextEdit(tab);
         textEdit->setObjectName(QString::fromUtf8("textEdit"));
-        textEdit->setGeometry(QRect(160, 620, 101, 21));
+        textEdit->setGeometry(QRect(130, 620, 101, 21));
         radioButton = new QRadioButton(tab);
         radioButton->setObjectName(QString::fromUtf8("radioButton"));
         radioButton->setGeometry(QRect(120, 600, 84, 19));
@@ -123,16 +122,13 @@ public:
         radioButton_8->setGeometry(QRect(630, 600, 101, 19));
         pushButton = new QPushButton(tab);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(290, 620, 101, 21));
+        pushButton->setGeometry(QRect(300, 620, 101, 21));
         tabWidget->addTab(tab, QString());
         tab_2 = new QWidget();
         tab_2->setObjectName(QString::fromUtf8("tab_2"));
-        tableWidget = new QTableWidget(tab_2);
-        tableWidget->setObjectName(QString::fromUtf8("tableWidget"));
-        tableWidget->setGeometry(QRect(0, 0, 871, 591));
         textEdit_2 = new QTextEdit(tab_2);
         textEdit_2->setObjectName(QString::fromUtf8("textEdit_2"));
-        textEdit_2->setGeometry(QRect(10, 610, 104, 21));
+        textEdit_2->setGeometry(QRect(10, 600, 104, 21));
         radioButton_9 = new QRadioButton(tab_2);
         radioButton_9->setObjectName(QString::fromUtf8("radioButton_9"));
         radioButton_9->setGeometry(QRect(130, 600, 84, 19));
@@ -168,19 +164,19 @@ public:
         radioButton_19->setGeometry(QRect(440, 620, 84, 19));
         pushButton_4 = new QPushButton(tab_2);
         pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
-        pushButton_4->setGeometry(QRect(600, 610, 80, 21));
+        pushButton_4->setGeometry(QRect(610, 610, 80, 21));
         pushButton_5 = new QPushButton(tab_2);
         pushButton_5->setObjectName(QString::fromUtf8("pushButton_5"));
-        pushButton_5->setGeometry(QRect(690, 610, 80, 21));
+        pushButton_5->setGeometry(QRect(700, 610, 80, 21));
         pushButton_6 = new QPushButton(tab_2);
         pushButton_6->setObjectName(QString::fromUtf8("pushButton_6"));
         pushButton_6->setGeometry(QRect(780, 610, 80, 21));
+        tableView_2 = new QTableView(tab_2);
+        tableView_2->setObjectName(QString::fromUtf8("tableView_2"));
+        tableView_2->setGeometry(QRect(0, 0, 871, 591));
         tabWidget->addTab(tab_2, QString());
         tab_3 = new QWidget();
         tab_3->setObjectName(QString::fromUtf8("tab_3"));
-        tableWidget_2 = new QTableWidget(tab_3);
-        tableWidget_2->setObjectName(QString::fromUtf8("tableWidget_2"));
-        tableWidget_2->setGeometry(QRect(0, 0, 851, 591));
         textEdit_3 = new QTextEdit(tab_3);
         textEdit_3->setObjectName(QString::fromUtf8("textEdit_3"));
         textEdit_3->setGeometry(QRect(10, 610, 191, 21));
@@ -202,6 +198,9 @@ public:
         pushButton_9 = new QPushButton(tab_3);
         pushButton_9->setObjectName(QString::fromUtf8("pushButton_9"));
         pushButton_9->setGeometry(QRect(670, 610, 80, 21));
+        tableView_3 = new QTableView(tab_3);
+        tableView_3->setObjectName(QString::fromUtf8("tableView_3"));
+        tableView_3->setGeometry(QRect(0, 0, 871, 591));
         tabWidget->addTab(tab_3, QString());
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);

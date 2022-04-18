@@ -17,10 +17,10 @@
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>0</x>
       <y>0</y>
       <width>871</width>
-      <height>671</height>
+      <height>681</height>
      </rect>
     </property>
     <property name="currentIndex">
@@ -43,7 +43,7 @@
      <widget class="QPushButton" name="pushButton_3">
       <property name="geometry">
        <rect>
-        <x>540</x>
+        <x>550</x>
         <y>620</y>
         <width>101</width>
         <height>21</height>
@@ -82,7 +82,7 @@
      <widget class="QPushButton" name="pushButton_2">
       <property name="geometry">
        <rect>
-        <x>420</x>
+        <x>430</x>
         <y>620</y>
         <width>101</width>
         <height>21</height>
@@ -95,7 +95,7 @@
      <widget class="QTextEdit" name="textEdit">
       <property name="geometry">
        <rect>
-        <x>160</x>
+        <x>130</x>
         <y>620</y>
         <width>101</width>
         <height>21</height>
@@ -183,7 +183,7 @@
      <widget class="QPushButton" name="pushButton">
       <property name="geometry">
        <rect>
-        <x>290</x>
+        <x>300</x>
         <y>620</y>
         <width>101</width>
         <height>21</height>
@@ -198,21 +198,11 @@
      <attribute name="title">
       <string>Current Cars</string>
      </attribute>
-     <widget class="QTableWidget" name="tableWidget">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>871</width>
-        <height>591</height>
-       </rect>
-      </property>
-     </widget>
      <widget class="QTextEdit" name="textEdit_2">
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>610</y>
+        <y>600</y>
         <width>104</width>
         <height>21</height>
        </rect>
@@ -364,7 +354,7 @@
      <widget class="QPushButton" name="pushButton_4">
       <property name="geometry">
        <rect>
-        <x>600</x>
+        <x>610</x>
         <y>610</y>
         <width>80</width>
         <height>21</height>
@@ -377,7 +367,7 @@
      <widget class="QPushButton" name="pushButton_5">
       <property name="geometry">
        <rect>
-        <x>690</x>
+        <x>700</x>
         <y>610</y>
         <width>80</width>
         <height>21</height>
@@ -400,21 +390,21 @@
        <string>Exit</string>
       </property>
      </widget>
+     <widget class="QTableView" name="tableView_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>871</width>
+        <height>591</height>
+       </rect>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_3">
      <attribute name="title">
       <string>Owners</string>
      </attribute>
-     <widget class="QTableWidget" name="tableWidget_2">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>851</width>
-        <height>591</height>
-       </rect>
-      </property>
-     </widget>
      <widget class="QTextEdit" name="textEdit_3">
       <property name="geometry">
        <rect>
@@ -501,6 +491,16 @@
       </property>
       <property name="text">
        <string>Exit</string>
+      </property>
+     </widget>
+     <widget class="QTableView" name="tableView_3">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>871</width>
+        <height>591</height>
+       </rect>
       </property>
      </widget>
     </widget>
