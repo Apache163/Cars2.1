@@ -39,6 +39,8 @@ private:
     QSqlDatabase db;
     QSqlQuery *query;
     QSqlTableModel *model;
+    QSqlQuery *query2;
+    QSqlTableModel *model2;
 
     int rb;
     QString str;
