@@ -6,6 +6,7 @@
 #include <QDebug>
 #include <QSqlQuery>
 #include <QSqlTableModel>
+#include <QSqlRelationalTableModel>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -46,6 +47,8 @@ private slots:
 
     void on_pushButton_8_clicked();
 
+    void on_pushButton_9_clicked();
+
 private:
     Ui::MainWindow *ui;
     QSqlDatabase db;
@@ -55,6 +58,9 @@ private:
     QSqlTableModel *model2;
     QSqlQuery *query3;
     QSqlTableModel *model3;
+    QSqlQuery *query4;
+    QSqlTableModel *model4;
+
 
     int rb;
     QString str;

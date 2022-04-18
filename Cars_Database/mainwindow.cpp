@@ -3,6 +3,7 @@
 #include <QSqlQuery>
 #include <QSqlTableModel>
 #include<iostream>
+#include <QSqlRelationalTableModel>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -39,6 +40,13 @@ MainWindow::MainWindow(QWidget *parent)
     model3->setTable("owner");
     model3->select();
     ui->tableView_3->setModel(model3);
+
+    query4 = new QSqlQuery(db);
+    model4 = new QSqlTableModel(this, db);
+    model4->setTable("QueryHelper");
+    model4->select();
+
+
 }
 
 MainWindow::~MainWindow()
@@ -225,13 +233,23 @@ void MainWindow::on_pushButton_7_clicked()
 
     if (ui->radioButton_22->isChecked())
     {
-        //запрос между таблицами
+        qr = "FullName = '"+str+"'";
+        ui->tableView_3->setModel(model4);
+        model4->setFilter(qr);
+        model4->select();
     }
 
     if (ui->radioButton_23->isChecked())
     {
         model3->setFilter("OwnerId = "+str);
         model3->select();
+    }
+    if (ui->radioButton_24->isChecked())
+    {
+        qr = "Email = '"+str+"'";
+        ui->tableView_3->setModel(model4);
+        model4->setFilter(qr);
+        model4->select();
     }
 
 
@@ -245,5 +263,13 @@ void MainWindow::on_pushButton_8_clicked()
     model3->setTable("owner");
     model3->select();
     ui->tableView_3->setModel(model3);
+
+
+}
+
+
+void MainWindow::on_pushButton_9_clicked()
+{
+    this->close();
 }
 
