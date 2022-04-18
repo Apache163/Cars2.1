@@ -69,6 +69,7 @@ public:
     QPushButton *pushButton_8;
     QPushButton *pushButton_9;
     QTableView *tableView_3;
+    QRadioButton *radioButton_23;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -182,25 +183,28 @@ public:
         textEdit_3->setGeometry(QRect(10, 610, 191, 21));
         radioButton_20 = new QRadioButton(tab_3);
         radioButton_20->setObjectName(QString::fromUtf8("radioButton_20"));
-        radioButton_20->setGeometry(QRect(230, 610, 61, 19));
+        radioButton_20->setGeometry(QRect(290, 610, 61, 19));
         radioButton_21 = new QRadioButton(tab_3);
         radioButton_21->setObjectName(QString::fromUtf8("radioButton_21"));
-        radioButton_21->setGeometry(QRect(290, 610, 91, 19));
+        radioButton_21->setGeometry(QRect(360, 610, 91, 19));
         radioButton_22 = new QRadioButton(tab_3);
         radioButton_22->setObjectName(QString::fromUtf8("radioButton_22"));
-        radioButton_22->setGeometry(QRect(380, 610, 84, 19));
+        radioButton_22->setGeometry(QRect(460, 610, 84, 19));
         pushButton_7 = new QPushButton(tab_3);
         pushButton_7->setObjectName(QString::fromUtf8("pushButton_7"));
-        pushButton_7->setGeometry(QRect(480, 610, 80, 21));
+        pushButton_7->setGeometry(QRect(570, 610, 80, 21));
         pushButton_8 = new QPushButton(tab_3);
         pushButton_8->setObjectName(QString::fromUtf8("pushButton_8"));
-        pushButton_8->setGeometry(QRect(580, 610, 80, 21));
+        pushButton_8->setGeometry(QRect(670, 610, 80, 21));
         pushButton_9 = new QPushButton(tab_3);
         pushButton_9->setObjectName(QString::fromUtf8("pushButton_9"));
-        pushButton_9->setGeometry(QRect(670, 610, 80, 21));
+        pushButton_9->setGeometry(QRect(760, 610, 80, 21));
         tableView_3 = new QTableView(tab_3);
         tableView_3->setObjectName(QString::fromUtf8("tableView_3"));
         tableView_3->setGeometry(QRect(0, 0, 871, 591));
+        radioButton_23 = new QRadioButton(tab_3);
+        radioButton_23->setObjectName(QString::fromUtf8("radioButton_23"));
+        radioButton_23->setGeometry(QRect(220, 610, 84, 19));
         tabWidget->addTab(tab_3, QString());
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
@@ -213,7 +217,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -255,6 +259,7 @@ public:
         pushButton_7->setText(QApplication::translate("MainWindow", "Find in DB", nullptr));
         pushButton_8->setText(QApplication::translate("MainWindow", "Back to DB", nullptr));
         pushButton_9->setText(QApplication::translate("MainWindow", "Exit", nullptr));
+        radioButton_23->setText(QApplication::translate("MainWindow", "OwnerID", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_3), QApplication::translate("MainWindow", "Owners", nullptr));
     } // retranslateUi
 

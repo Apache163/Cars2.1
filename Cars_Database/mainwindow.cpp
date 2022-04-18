@@ -202,3 +202,48 @@ void MainWindow::on_pushButton_5_clicked()
     ui->tableView_2->setModel(model2);
 }
 
+
+void MainWindow::on_pushButton_7_clicked()
+{
+    QString str = ui->textEdit_3->toPlainText();
+    qDebug() << "You typed: " + str + " in TextEdit";
+    ui->textEdit_3->clear();
+
+    if (ui->radioButton_20->isChecked())
+    {
+        qr = "FullName = '"+str+"'";
+        model3->setFilter(qr);
+        model3->select();
+    }
+
+    if (ui->radioButton_21->isChecked())
+    {
+        qr = "Email = '"+str+"'";
+        model3->setFilter(qr);
+        model3->select();
+    }
+
+    if (ui->radioButton_22->isChecked())
+    {
+        //запрос между таблицами
+    }
+
+    if (ui->radioButton_23->isChecked())
+    {
+        model3->setFilter("OwnerId = "+str);
+        model3->select();
+    }
+
+
+}
+
+
+void MainWindow::on_pushButton_8_clicked()
+{
+    query3 = new QSqlQuery(db);
+    model3 = new QSqlTableModel(this, db);
+    model3->setTable("owner");
+    model3->select();
+    ui->tableView_3->setModel(model3);
+}
+
