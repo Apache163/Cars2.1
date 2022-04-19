@@ -7,6 +7,8 @@
 #include <QSqlQuery>
 #include <QSqlTableModel>
 #include <QSqlRelationalTableModel>
+#include <QFileDialog>
+#include <QFile>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -49,6 +51,8 @@ private slots:
 
     void on_pushButton_9_clicked();
 
+    void on_pushButton_12_clicked();
+
 private:
     Ui::MainWindow *ui;
     QSqlDatabase db;
@@ -65,5 +69,6 @@ private:
     int rb;
     QString str;
     QString qr;
+    QString File;
 };
 #endif // MAINWINDOW_H

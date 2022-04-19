@@ -4,6 +4,8 @@
 #include <QSqlTableModel>
 #include<iostream>
 #include <QSqlRelationalTableModel>
+#include <QFileDialog>
+#include <QFile>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -271,5 +273,16 @@ void MainWindow::on_pushButton_8_clicked()
 void MainWindow::on_pushButton_9_clicked()
 {
     this->close();
+}
+
+
+void MainWindow::on_pushButton_12_clicked()
+{
+    QString File = QFileDialog::getOpenFileName(this,tr("Сhoose DataBase"),"C://","All file (*.*);;");
+    qDebug() << File;
+    QFile::copy(File, "E:\\Work\\Cars2.0\\build-Cars_Database-Desktop_Qt_5_12_12_MSVC2015_64bit-Debug");
+    qDebug() << File;
+
+
 }
 

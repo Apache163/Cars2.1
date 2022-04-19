@@ -92,6 +92,9 @@ public:
         tableView = new QTableView(tab);
         tableView->setObjectName(QString::fromUtf8("tableView"));
         tableView->setGeometry(QRect(0, 0, 1001, 591));
+        QFont font;
+        font.setPointSize(9);
+        tableView->setFont(font);
         pushButton_3 = new QPushButton(tab);
         pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
         pushButton_3->setGeometry(QRect(890, 600, 101, 21));
@@ -233,7 +236,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
