@@ -6,13 +6,14 @@
 #include <QSqlRelationalTableModel>
 #include <QFileDialog>
 #include <QFile>
+#include <QDir>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    db = QSqlDatabase::addDatabase("QSQLITE");
+    /*db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName("aboutcar");
     db.setUserName("root");
     db.setPassword("");
@@ -46,7 +47,7 @@ MainWindow::MainWindow(QWidget *parent)
     query4 = new QSqlQuery(db);
     model4 = new QSqlTableModel(this, db);
     model4->setTable("QueryHelper");
-    model4->select();
+    model4->select();*/
 
 
 }
@@ -280,9 +281,157 @@ void MainWindow::on_pushButton_12_clicked()
 {
     QString File = QFileDialog::getOpenFileName(this,tr("Сhoose DataBase"),"C://","All file (*.*);;");
     qDebug() << File;
-    QFile::copy(File, "E:\\Work\\Cars2.0\\build-Cars_Database-Desktop_Qt_5_12_12_MSVC2015_64bit-Debug");
+    if (QFile::exists(File))
+    {
+        QString FilePath = "E://Work//Cars2.0//build-Cars_Database-Desktop_Qt_5_12_12_MSVC2015_64bit-Debug//"+ File.right(File.size()-File.lastIndexOf("/")-1);
+        qDebug() << FilePath;
+        qDebug() << QFile::copy(File, FilePath);
+    }
+    else
+    {
+        qDebug() << "No file error";
+    }
+
+        db = QSqlDatabase::addDatabase("QSQLITE");
+        db.setDatabaseName("aboutcar");
+        db.setUserName("root");
+        db.setPassword("");
+        if(db.open())
+        {
+            qDebug("Success");
+        }
+        else
+        {
+            qDebug("Error");
+        }
+        query = new QSqlQuery(db);
+        model = new QSqlTableModel(this, db);
+        model->setTable("ABOUT_CARS");
+        model->select();
+        ui->tableView->setModel(model);
+
+        query2 = new QSqlQuery(db);
+        model2 = new QSqlTableModel(this, db);
+        model2->setTable("currentcar");
+        model2->select();
+        ui->tableView_2->setModel(model2);
+
+        query3 = new QSqlQuery(db);
+        model3 = new QSqlTableModel(this, db);
+        model3->setTable("owner");
+        model3->select();
+        ui->tableView_3->setModel(model3);
+
+        query4 = new QSqlQuery(db);
+        model4 = new QSqlTableModel(this, db);
+        model4->setTable("QueryHelper");
+        model4->select();
+
+
+
+
+
+}
+
+
+void MainWindow::on_pushButton_11_clicked()
+{
+    QString File = QFileDialog::getOpenFileName(this,tr("Сhoose DataBase"),"C://","All file (*.*);;");
     qDebug() << File;
+    if (QFile::exists(File))
+    {
+        QString FilePath = "E://Work//Cars2.0//build-Cars_Database-Desktop_Qt_5_12_12_MSVC2015_64bit-Debug//"+ File.right(File.size()-File.lastIndexOf("/")-1);
+        qDebug() << FilePath;
+        qDebug() << QFile::copy(File, FilePath);
+    }
+    else
+    {
+        qDebug() << "No file error";
+    }
+    db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setDatabaseName("aboutcar");
+    db.setUserName("root");
+    db.setPassword("");
+    if(db.open())
+    {
+        qDebug("Success");
+    }
+    else
+    {
+        qDebug("Error");
+    }
+    query = new QSqlQuery(db);
+    model = new QSqlTableModel(this, db);
+    model->setTable("ABOUT_CARS");
+    model->select();
+    ui->tableView->setModel(model);
+
+    query2 = new QSqlQuery(db);
+    model2 = new QSqlTableModel(this, db);
+    model2->setTable("currentcar");
+    model2->select();
+    ui->tableView_2->setModel(model2);
+
+    query3 = new QSqlQuery(db);
+    model3 = new QSqlTableModel(this, db);
+    model3->setTable("owner");
+    model3->select();
+    ui->tableView_3->setModel(model3);
+
+    query4 = new QSqlQuery(db);
+    model4 = new QSqlTableModel(this, db);
+    model4->setTable("QueryHelper");
+    model4->select();
+}
 
 
+void MainWindow::on_pushButton_10_clicked()
+{
+    QString File = QFileDialog::getOpenFileName(this,tr("Сhoose DataBase"),"C://","All file (*.*);;");
+    qDebug() << File;
+    if (QFile::exists(File))
+    {
+        QString FilePath = "E://Work//Cars2.0//build-Cars_Database-Desktop_Qt_5_12_12_MSVC2015_64bit-Debug//"+ File.right(File.size()-File.lastIndexOf("/")-1);
+        qDebug() << FilePath;
+        qDebug() << QFile::copy(File, FilePath);
+    }
+    else
+    {
+        qDebug() << "No file error";
+    }
+    db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setDatabaseName("aboutcar");
+    db.setUserName("root");
+    db.setPassword("");
+    if(db.open())
+    {
+        qDebug("Success");
+    }
+    else
+    {
+        qDebug("Error");
+    }
+    query = new QSqlQuery(db);
+    model = new QSqlTableModel(this, db);
+    model->setTable("ABOUT_CARS");
+    model->select();
+    ui->tableView->setModel(model);
+
+    query2 = new QSqlQuery(db);
+    model2 = new QSqlTableModel(this, db);
+    model2->setTable("currentcar");
+    model2->select();
+    ui->tableView_2->setModel(model2);
+
+    query3 = new QSqlQuery(db);
+    model3 = new QSqlTableModel(this, db);
+    model3->setTable("owner");
+    model3->select();
+    ui->tableView_3->setModel(model3);
+
+    query4 = new QSqlQuery(db);
+    model4 = new QSqlTableModel(this, db);
+    model4->setTable("QueryHelper");
+    model4->select();
 }
 
