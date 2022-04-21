@@ -214,7 +214,7 @@ void MainWindow::on_pushButton_5_clicked()
 }
 
 
-void MainWindow::on_pushButton_7_clicked()
+void MainWindow::on_pushButton_7_clicked() //Запросы по поиску владельца и его автомобилей
 {
     QString str = ui->textEdit_3->toPlainText();
     qDebug() << "You typed: " + str + " in TextEdit";
