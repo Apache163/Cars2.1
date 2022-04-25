@@ -13,7 +13,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    /*db = QSqlDatabase::addDatabase("QSQLITE");
+    db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName("aboutcar");
     db.setUserName("root");
     db.setPassword("");
@@ -47,7 +47,7 @@ MainWindow::MainWindow(QWidget *parent)
     query4 = new QSqlQuery(db);
     model4 = new QSqlTableModel(this, db);
     model4->setTable("QueryHelper");
-    model4->select();*/
+    model4->select();
 
 
 }
@@ -283,7 +283,7 @@ void MainWindow::on_pushButton_12_clicked()
     qDebug() << File;
     if (QFile::exists(File))
     {
-        QString FilePath = "E://Work//Cars2.0//build-Cars_Database-Desktop_Qt_5_12_12_MSVC2015_64bit-Debug//"+ File.right(File.size()-File.lastIndexOf("/")-1);
+        QString FilePath = "E://Work//Cars2.0//Cars_Database//"+ File.right(File.size()-File.lastIndexOf("/")-1);
         qDebug() << FilePath;
         qDebug() << QFile::copy(File, FilePath);
     }
@@ -340,7 +340,7 @@ void MainWindow::on_pushButton_11_clicked()
     qDebug() << File;
     if (QFile::exists(File))
     {
-        QString FilePath = "E://Work//Cars2.0//build-Cars_Database-Desktop_Qt_5_12_12_MSVC2015_64bit-Debug//"+ File.right(File.size()-File.lastIndexOf("/")-1);
+        QString FilePath = "E://Work//Cars2.0//Cars_Database//"+ File.right(File.size()-File.lastIndexOf("/")-1);
         qDebug() << FilePath;
         qDebug() << QFile::copy(File, FilePath);
     }
@@ -391,7 +391,7 @@ void MainWindow::on_pushButton_10_clicked()
     qDebug() << File;
     if (QFile::exists(File))
     {
-        QString FilePath = "E://Work//Cars2.0//build-Cars_Database-Desktop_Qt_5_12_12_MSVC2015_64bit-Debug//"+ File.right(File.size()-File.lastIndexOf("/")-1);
+        QString FilePath = "E://Work//Cars2.0//Cars_Database//"+ File.right(File.size()-File.lastIndexOf("/")-1);
         qDebug() << FilePath;
         qDebug() << QFile::copy(File, FilePath);
     }
