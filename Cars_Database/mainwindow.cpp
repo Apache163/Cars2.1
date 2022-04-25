@@ -283,7 +283,7 @@ void MainWindow::on_pushButton_12_clicked()
     qDebug() << File;
     if (QFile::exists(File))
     {
-        QString FilePath = "E://Work//Cars2.0//Cars_Database//"+ File.right(File.size()-File.lastIndexOf("/")-1);
+        QString FilePath = "E://Work//Cars2.0//Cars_Database//"+ File.right(File.size()-File.lastIndexOf("/")-1); //QCoreApplication::applicationDirPath()
         qDebug() << FilePath;
         qDebug() << QFile::copy(File, FilePath);
     }
@@ -340,7 +340,7 @@ void MainWindow::on_pushButton_11_clicked()
     qDebug() << File;
     if (QFile::exists(File))
     {
-        QString FilePath = "E://Work//Cars2.0//Cars_Database//"+ File.right(File.size()-File.lastIndexOf("/")-1);
+        QString FilePath = "E://Work//Cars2.0//Cars_Database//"+ File.right(File.size()-File.lastIndexOf("/")-1); //QCoreApplication::applicationDirPath()
         qDebug() << FilePath;
         qDebug() << QFile::copy(File, FilePath);
     }
@@ -391,7 +391,7 @@ void MainWindow::on_pushButton_10_clicked()
     qDebug() << File;
     if (QFile::exists(File))
     {
-        QString FilePath = "E://Work//Cars2.0//Cars_Database//"+ File.right(File.size()-File.lastIndexOf("/")-1);
+        QString FilePath = "E://Work//Cars2.0//Cars_Database//"+ File.right(File.size()-File.lastIndexOf("/")-1); //QCoreApplication::applicationDirPath()
         qDebug() << FilePath;
         qDebug() << QFile::copy(File, FilePath);
     }
